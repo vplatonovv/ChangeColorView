@@ -8,12 +8,37 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet var colorView: UIView!
+    
+    @IBOutlet var redValueLabel: UILabel!
+    @IBOutlet var greenValueLabel: UILabel!
+    @IBOutlet var blueValueLabel: UILabel!
+    
+    @IBOutlet var redSlider: UISlider!
+    @IBOutlet var greenSlider: UISlider!
+    @IBOutlet var blueSlider: UISlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        colorView.layer.cornerRadius = 20
+        updateBackgroundColor()
     }
-
-
+    
+    @IBAction func updateBackgroundColor() {
+        let red = CGFloat(redSlider.value)
+        let green = CGFloat(greenSlider.value)
+        let blue = CGFloat(blueSlider.value)
+        
+        redValueLabel.text = String(format: "%.2f", Double(red))
+        greenValueLabel.text = String(format: "%.2f", Double(green))
+        blueValueLabel.text = String(format: "%.2f", Double(blue))
+        
+        colorView.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1)
+    }
+    
+    
 }
+
+
 
