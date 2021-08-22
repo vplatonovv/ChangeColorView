@@ -30,13 +30,12 @@ class ViewController: UIViewController {
         let green = CGFloat(greenSlider.value)
         let blue = CGFloat(blueSlider.value)
         
-        redValueLabel.text = String(format: "%.2f", Double(red))
-        greenValueLabel.text = String(format: "%.2f", Double(green))
-        blueValueLabel.text = String(format: "%.2f", Double(blue))
+        redValueLabel.text = String(format: "%.2f", red)
+        greenValueLabel.text = String(format: "%.2f", green)
+        blueValueLabel.text = String(format: "%.2f", blue)
         
         colorView.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1)
     }
-    
     
 }
 
