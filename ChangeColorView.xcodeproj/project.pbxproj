@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		955F868B26E5349D0087EB22 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955F868A26E5349D0087EB22 /* MainViewController.swift */; };
 		95D5776F26D1411300D4221C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D5776E26D1411300D4221C /* AppDelegate.swift */; };
 		95D5777126D1411300D4221C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D5777026D1411300D4221C /* SceneDelegate.swift */; };
 		95D5777326D1411300D4221C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D5777226D1411300D4221C /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		955F868A26E5349D0087EB22 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		95D5776B26D1411300D4221C /* ChangeColorView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChangeColorView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D5776E26D1411300D4221C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95D5777026D1411300D4221C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				95D5776E26D1411300D4221C /* AppDelegate.swift */,
 				95D5777026D1411300D4221C /* SceneDelegate.swift */,
+				955F868A26E5349D0087EB22 /* MainViewController.swift */,
 				95D5777226D1411300D4221C /* ViewController.swift */,
 				95D5777426D1411300D4221C /* Main.storyboard */,
 				95D5777726D1411300D4221C /* Assets.xcassets */,
@@ -140,6 +143,7 @@
 				95D5777326D1411300D4221C /* ViewController.swift in Sources */,
 				95D5776F26D1411300D4221C /* AppDelegate.swift in Sources */,
 				95D5777126D1411300D4221C /* SceneDelegate.swift in Sources */,
+				955F868B26E5349D0087EB22 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
