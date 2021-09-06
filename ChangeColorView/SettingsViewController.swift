@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SettingsViewController: UIViewController {
     
     @IBOutlet var colorView: UIView! {
         didSet {
@@ -34,28 +34,40 @@ class ViewController: UIViewController {
     @IBOutlet weak var blueTextField: UITextField!
     
     var delegate: ViewControllerDelegate!
-    
-    var red: Float!
-    var green: Float!
-    var blue: Float!
+    var currentColor: CIColor!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        redSlider.value = red
-        greenSlider.value = green
-        blueSlider.value = blue
-        
         updateBackgroundColor()
         
         redTextField.delegate = self
         greenTextField.delegate = self
         blueTextField.delegate = self
+        
+        updateSliders()
+        updateTextField()
+        updateColorView()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
+    }
+    
+    private func updateColorView() {
+        colorView.backgroundColor = UIColor(ciColor: currentColor)
+    }
+    
+    private func updateTextField() {
+        redTextField.text = String(format: "%.2f", Float(currentColor.red))
+        greenTextField.text = String(format: "%.2f", Float(currentColor.green))
+        blueTextField.text = String(format: "%.2f", Float(currentColor.blue))
+    }
+    
+    private func updateSliders() {
+        redSlider.value = Float(currentColor.red)
+        greenSlider.value = Float(currentColor.green)
+        blueSlider.value = Float(currentColor.blue)
     }
     
     @IBAction func updateBackgroundColor() {
@@ -76,12 +88,13 @@ class ViewController: UIViewController {
     
     
     @IBAction func doneButtonTaped() {
-        delegate.setNewColor(red: redSlider.value , green: greenSlider.value, blue: blueSlider.value)
+        guard let color = colorView.backgroundColor else { return }
+        delegate.setNewColor(color)
         dismiss(animated: true, completion: nil)
     }
 }
 
-extension ViewController: UITextFieldDelegate {
+extension SettingsViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         
         guard let newColorValue = textField.text else { return }
@@ -95,5 +108,15 @@ extension ViewController: UITextFieldDelegate {
             blueSlider.value = floatValue
         }
         updateBackgroundColor()
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == redTextField {
+            greenTextField.becomeFirstResponder()
+        } else if textField == greenTextField {
+            blueTextField.becomeFirstResponder()
+        } else {
+            textField.endEditing(true)
+        }
+        return true
     }
 }
