@@ -33,17 +33,16 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var greenTextField: UITextField!
     @IBOutlet weak var blueTextField: UITextField!
     
-    var delegate: ViewControllerDelegate!
+    weak var delegate: ViewControllerDelegate!
     var currentColor: CIColor!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateBackgroundColor()
-        
         redTextField.delegate = self
         greenTextField.delegate = self
         blueTextField.delegate = self
         
+        updateBackgroundColor()
         updateSliders()
         updateTextField()
         updateColorView()

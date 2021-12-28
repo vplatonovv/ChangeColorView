@@ -15,8 +15,34 @@
                     <view key="view" contentMode="scaleToFill" id="Nrp-Td-ccp">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use the button on the top to customize the background as you like!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3M-ll-jE0">
+                                <rect key="frame" x="95" y="351.66666666666669" width="200" height="141"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="WJA-Ff-fbI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="22"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change your background color!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYy-h3-iOm">
+                                <rect key="frame" x="70" y="128" width="250" height="99.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="U6R-TQ-LAh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="oFj-vK-sgG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wYy-h3-iOm" firstAttribute="centerX" secondItem="Nrp-Td-ccp" secondAttribute="centerX" id="8Rd-Ij-x1K"/>
+                            <constraint firstItem="R3M-ll-jE0" firstAttribute="centerY" secondItem="Nrp-Td-ccp" secondAttribute="centerY" id="NlP-sM-LNr"/>
+                            <constraint firstItem="R3M-ll-jE0" firstAttribute="centerX" secondItem="Nrp-Td-ccp" secondAttribute="centerX" id="gcl-XJ-TEg"/>
+                            <constraint firstItem="wYy-h3-iOm" firstAttribute="top" secondItem="oFj-vK-sgG" secondAttribute="top" constant="40" id="mRb-8U-3uR"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Nus-1v-iZu">
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="0YY-ib-BXO">
@@ -28,7 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Euc-60-ASE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="212" y="75"/>
+            <point key="canvasLocation" x="210.76923076923077" y="74.644549763033169"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="tne-QT-ifu">
